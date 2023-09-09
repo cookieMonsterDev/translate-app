@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.textarea {
+  @apply py-3 px-4 block w-full border border-gray-200 rounded-md focus:border-blue-500 focus:outline-blue-500
+}

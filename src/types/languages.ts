@@ -1,238 +1,140 @@
-enum LanguagesEnum {
-  af = "Afrikaans",
-  ak = "Twi (Akan)",
-  am = "Amharic",
-  ar = 'Arabic',
-  as = 'Assamese',
-  ay = 'Aymara',
-  az = 'Azerbaijani',
-  be = 'Belarusian',
-  bg = 'Bulgarian',
-  bho = 'Bhojpuri',
-  bm = 'Bambara',
-  bn = 'Bengali',
-  bs = 'Bosnian',
-  ca = 'Catalan',
-  ceb = 'Cebuano',
-  ckb = 'Kurdish (Sorani)',
-  co = 'Corsican',
-  cs = 'Czech',
-  cy = 'Welsh',
-  da = 'Danish',
-  de = 'German',
-  doi = 'Dogri',
-  dv = 'Dhivehi',
-  ee = 'Ewe',
-  el = 'Greek',
-  en = 'English',
-  eo = 'Esperanto',
-  es = 'Spanish',
-  et = 'Estonian',
-  eu = 'Basque',
-  fa = 'Persian',
-  fi = 'Finnish',
-  fr = 'French',
-  fy = 'Frisian',
-  ga = 'Irish',
-  gd = 'Scots Gaelic',
-  gl = 'Galician',
-  gn = 'Guarani',
-  gom = 'Konkani',
-  gu = 'Gujarati',
+const Languages: { [key: string]: string } = {
+  af: "Afrikaans",
+  ak: "Twi (Akan)",
+  am: "Amharic",
+  ar: "Arabic",
+  as: "Assamese",
+  ay: "Aymara",
+  az: "Azerbaijani",
+  be: "Belarusian",
+  bg: "Bulgarian",
+  bho: "Bhojpuri",
+  bm: "Bambara",
+  bn: "Bengali",
+  bs: "Bosnian",
+  ca: "Catalan",
+  ceb: "Cebuano",
+  ckb: "Kurdish (Sorani)",
+  co: "Corsican",
+  cs: "Czech",
+  cy: "Welsh",
+  da: "Danish",
+  de: "German",
+  doi: "Dogri",
+  dv: "Dhivehi",
+  ee: "Ewe",
+  el: "Greek",
+  en: "English",
+  eo: "Esperanto",
+  es: "Spanish",
+  et: "Estonian",
+  eu: "Basque",
+  fa: "Persian",
+  fi: "Finnish",
+  fr: "French",
+  fy: "Frisian",
+  ga: "Irish",
+  gd: "Scots Gaelic",
+  gl: "Galician",
+  gn: "Guarani",
+  gom: "Konkani",
+  gu: "Gujarati",
+  ha: "Hausa",
+  haw: "Hawaiian",
+  he: "Hebrew",
+  hi: "Hindi",
+  hmn: "Hmong",
+  hr: "Croatian",
+  ht: "Haitian Creole",
+  hu: "Hungarian",
+  hy: "Armenian",
+  id: "Indonesian",
+  ig: "Igbo",
+  ilo: "Ilocano",
+  is: "Icelandic",
+  it: "Italian",
+  iw: "Hebrew (same)",
+  ja: "Japanese",
+  jv: "Javanese",
+  jw: "Javanese (same)",
+  ka: "Georgian",
+  kk: "Kazakh",
+  km: "Khmer",
+  kn: "Kannada",
+  ko: "Korean",
+  kri: "Krio",
+  ku: "Kurdish",
+  ky: "Kyrgyz",
+  la: "Latin",
+  lb: "Luxembourgish",
+  lg: "Luganda",
+  ln: "Lingala",
+  lo: "Lao",
+  lt: "Lithuanian",
+  lus: "Mizo",
+  lv: "Latvian",
+  mai: "Maithili",
+  mg: "Malagasy",
+  mi: "Maori",
+  mk: "Macedonian",
+  ml: "Malayalam",
+  mn: "Mongolian",
+  "mni-Mtei": "Meiteilon (Manipuri)",
+  mr: "Marathi",
+  ms: "Malay",
+  mt: "Maltese",
+  my: "Myanmar (Burmese)",
+  ne: "Nepali",
+  nl: "Dutch",
+  no: "Norwegian",
+  nso: "Sepedi",
+  ny: "Nyanja (Chichewa)",
+  om: "Oromo",
+  or: "Odia (Oriya)",
+  pa: "Punjabi",
+  pl: "Polish",
+  ps: "Pashto",
+  pt: "Portuguese (Portugal, Brazil)",
+  qu: "Quechua",
+  ro: "Romanian",
+  ru: "Orkish",
+  rw: "Kinyarwanda",
+  sa: "Sanskrit",
+  sd: "Sindhi",
+  si: "Sinhala (Sinhalese)",
+  sk: "Slovak",
+  sl: "Slovenian",
+  sm: "Samoan",
+  sn: "Shona",
+  so: "Somali",
+  sq: "Albanian",
+  sr: "Serbian",
+  st: "Sesotho",
+  su: "Sundanese",
+  sv: "Swedish",
+  sw: "Swahili",
+  ta: "Tamil",
+  te: "Telugu",
+  tg: "Tajik",
+  th: "Thai",
+  ti: "Tigrinya",
+  tk: "Turkmen",
+  tl: "Tagalog (Filipino)",
+  tr: "Turkish",
+  ts: "Tsonga",
+  tt: "Tatar",
+  ug: "Uyghur",
+  uk: "Ukrainian",
+  ur: "Urdu",
+  uz: "Uzbek",
+  vi: "Vietnamese",
+  xh: "Xhosa",
+  yi: "Yiddish",
+  yo: "Yoruba",
+  zh: "Chinese (Simplified) (same)",
+  "zh-CN": "Chinese (Simplified)",
+  "zh-TW": "Chinese (Traditional)",
+  zu: "Zulu",
+};
 
-
-"": "ha"
-},
-"": "haw"
-},
-"": "he"
-},
-"": "hi"
-},
-"": "hmn"
-},
-"": "hr"
-},
-"": "ht"
-},
-"": "hu"
-},
-"": "hy"
-},
-"": "id"
-},
-"": "ig"
-},
-"": "ilo"
-},
-"": "is"
-},
-"": "it"
-},
-"": "iw"
-},
-"": "ja"
-},
-"": "jv"
-},
-"": "jw"
-},
-"": "ka"
-},
-"": "kk"
-},
-"": "km"
-},
-"": "kn"
-},
-"": "ko"
-},
-"": "kri"
-},
-"": "ku"
-},
-"": "ky"
-},
-"": "la"
-},
-"": "lb"
-},
-"": "lg"
-},
-"": "ln"
-},
-"": "lo"
-},
-"": "lt"
-},
-"": "lus"
-},
-"": "lv"
-},
-"": "mai"
-},
-"": "mg"
-},
-"": "mi"
-},
-"": "mk"
-},
-"": "ml"
-},
-"": "mn"
-},
-"": "mni-Mtei"
-},
-"": "mr"
-},
-"": "ms"
-},
-"": "mt"
-},
-"": "my"
-},
-"": "ne"
-},
-"": "nl"
-},
-"": "no"
-},
-"": "nso"
-},
-"": "ny"
-},
-"": "om"
-},
-"": "or"
-},
-"": "pa"
-},
-"": "pl"
-},
-"": "ps"
-},
-"": "pt"
-},
-"": "qu"
-},
-"": "ro"
-},
-"": "ru"
-},
-"": "rw"
-},
-"": "sa"
-},
-"": "sd"
-},
-"": "si"
-},
-"": "sk"
-},
-"": "sl"
-},
-"": "sm"
-},
-"": "sn"
-},
-"": "so"
-},
-"": "sq"
-},
-"": "sr"
-},
-"": "st"
-},
-"": "su"
-},
-"": "sv"
-},
-"": "sw"
-},
-"": "ta"
-},
-"": "te"
-},
-"": "tg"
-},
-"": "th"
-},
-"": "ti"
-},
-"": "tk"
-},
-"": "tl"
-},
-"": "tr"
-},
-"": "ts"
-},
-"": "tt"
-},
-"": "ug"
-},
-"": "uk"
-},
-"": "ur"
-},
-"": "uz"
-},
-"": "vi"
-},
-"": "xh"
-},
-"": "yi"
-},
-"": "yo"
-},
-"": "zh"
-},
-"": "zh-CN"
-},
-"": "zh-TW"
-},
-"": "zu"
-}
-}
-
-export default LanguagesEnum;
+export default Languages;

@@ -1,9 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
+import Languages from "../types/languages";
 import Api from "../lib/axios";
 
 type ApiRes = { language: string };
 
-type Language = { code: string; name: string };
+type Language = { isoCode: string; langName: string };
 
 const useLanguages = () => {
   const { data: languages, isLoading } = useQuery({
@@ -11,10 +12,18 @@ const useLanguages = () => {
       try {
         const res = await Api.get("languages");
 
-        const data = res.data as ApiRes;
-        // const res = data.map(e => e)
+        const data = res.data.data.languages as ApiRes[];
 
-        return data as Language[];
+        const mappedData: Language[] = data.map((e) => {
+          const code = e.language;
+
+          return {
+            isoCode: code,
+            langName: Languages[code]|| "something",
+          } satisfies Language;
+        });
+
+        return mappedData;
       } catch (e) {
         console.error(e);
       }
