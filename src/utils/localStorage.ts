@@ -4,7 +4,8 @@ export class LocalStorage {
   }
 
   getItem(key: string) {
-    return window.localStorage.getItem(key);
+    const val = window.localStorage.getItem(key);
+    return val ? JSON.parse(val) : val;
   }
 
   removeItem(key: string) {
@@ -16,4 +17,4 @@ export class LocalStorage {
   }
 }
 
-export default new LocalStorage()
+export default new LocalStorage();

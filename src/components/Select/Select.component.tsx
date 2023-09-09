@@ -8,7 +8,6 @@ export const SelectComponent: React.FC<SelectProps> = ({
   defaultOption,
   onChange,
 }) => {
-  console.log(defaultOption)
   const [selectedValue, setSelectedValue] = useState(defaultOption);
 
   const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {

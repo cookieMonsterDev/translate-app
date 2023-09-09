@@ -8,7 +8,7 @@ export const defaultSourcelang = () => {
     return "en";
   }
 
-  return JSON.parse(s);
+  return s;
 };
 
 export const defaultTargetlang = () => {
@@ -19,5 +19,5 @@ export const defaultTargetlang = () => {
     return "uk";
   }
 
-  return JSON.parse(t);
+  return t;
 };

@@ -29,6 +29,7 @@ const useLanguages = () => {
       }
     },
     queryKey: ["languages"],
+    enabled: true
   });
 
   return { languages, isLoading };
