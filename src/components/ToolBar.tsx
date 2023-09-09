@@ -1,4 +1,3 @@
-import React from "react";
 import { Select } from "./Select";
 import LS from "../utils/localStorage";
 import useLanguages from "../hooks/useLanguages";
@@ -9,15 +8,14 @@ const ToolBar = () => {
 
   const handleSourceLangChange = (lang: string) => LS.setItem("source", lang);
   const handleTargetLangChange = (lang: string) => LS.setItem("target", lang);
-  const s = defaultSourcelang();
 
   return (
-    <header className="container flex justify-between px-20 py-5 bg-red-500">
-      <section className="">
+    <header className="container flex justify-center gap-x-10 py-5">
+      <section>
         {languages && (
           <Select
             id="source_lang"
-            defaultOption={s}
+            defaultOption={defaultSourcelang()}
             options={languages.map((e) => {
               return { key: e.langName, value: e.isoCode };
             })}
@@ -25,7 +23,6 @@ const ToolBar = () => {
           />
         )}
       </section>
-      <button>test</button>
       <section>
         {languages && (
           <Select
